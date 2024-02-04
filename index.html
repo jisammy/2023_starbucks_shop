@@ -1,36 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starbucks</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+  </head>
 
-    <link rel="stylesheet" href="./css/reset.css">
-</head>
-
-
-<body>
+  <body>
     <nav>
+      <a href="">
+        <img src="./img3/starbucks_icon.png" alt="" />
+      </a>
+      <div class="navTitle">
+        <div><a href="#">門市類型</a></div>
+        <div><a href="#">門市資訊</a></div>
+        <div><a href="#">其他服務</a></div>
+      </div>
+      <div class="navIcon">
         <a href="">
-            <img src="./img3/starbucks_icon.png" alt="">
+          <img src="./img3/facebook_icon.png" alt="" />
         </a>
-        <div>
-            <div>門市類型</div>
-            <div>門市資訊</div>
-            <div>其他服務</div>
-        </div>
-        <div>
-            <a href="">
-                <img src="./img3/facebook_icon.png" alt="">
-            </a>
-            <a href="">
-                <img src="./img3/ig_icon.png" alt="">
-            </a>
-        </div>
+        <a href="">
+          <img src="./img3/ig_icon.png" alt="" />
+        </a>
+      </div>
     </nav>
 
+    <!-- 輪播 -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="./img3/banner_1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./img3/banner_2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="./img3/banner_3.jpg" alt="">
+        </div>
+      </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
 
 
-</body>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+  </body>
 </html>
