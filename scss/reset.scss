@@ -5,48 +5,23 @@
     font-family: '微軟正黑體';
 }
 
-nav{
-    display: grid;
-    grid-template-columns:20% 65% 15% ;
-    align-items: center;
-    padding: 20px 20px;
-    background-color: rgba(#ccc, 0.8);
-    box-shadow: 0 2px 5px #ccc;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    
+.pc{
+    display: block !important;
+    @media screen and (max-width: 768px){
+        display: none !important;
+    }
 }
-.navTitle{
-    display: flex;
-}
-
-.navTitle > div{
-    margin: 0 15px;
-    a{
-        text-decoration: none;
-        color: #000;
+.mb{
+    display: none !important;
+    @media screen and (max-width: 768px){
+        display: block !important;
     }
 }
 
 
-
-.navIcon{
-    text-align: center;
-    a{
-        text-decoration: none;
-        img{
-            width: 32px;
-            height: 32px;
-        }
-    }
-}
-
-.swiper-slide{
-    img{
-        
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-    }
-}
+// 引入 資料夾名稱/ "_分支名稱"
+// 有分引入順序
+// 引入的scss都放在最後面
+// 避免class名稱重複 !!
+@import "page/_nav.scss"; //導覽列
+@import "page/_swiper.scss"; // 輪播

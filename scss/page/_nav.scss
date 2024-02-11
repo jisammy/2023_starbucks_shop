@@ -1,0 +1,54 @@
+nav{
+    display: grid;
+    grid-template-columns:20% 65% 15% ;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: rgba(#ccc, 0.8);
+    box-shadow: 0 2px 5px #ccc;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    @media screen and (max-width: 768px){
+        grid-template-columns:repeat(2,1fr); //(子元素總數量, 1fr(平均分散寬度))
+
+        // 方法2
+        // grid-template-columns:50% 50%;
+    }
+}
+.navTitle{
+    display: flex;
+    @media screen and (max-width: 768px){
+        display: none;
+    }
+}
+
+.navTitle > div{
+    margin: 0 15px;
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+
+
+.navIcon{
+    text-align: center;
+    a{
+        text-decoration: none;
+        img{
+            width: 32px;
+            height: 32px;
+        }
+        .fb_icon{
+            width: 31px;
+            height: 31px;
+        }
+    }
+    
+}
+.menu{
+    @media screen and (max-width: 768px){
+        text-align: right;
+    }
+}
