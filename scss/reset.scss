@@ -5,6 +5,7 @@
     font-family: '微軟正黑體';
 }
 
+//  !important 最高層級(最高權重)
 .pc{
     display: block !important;
     @media screen and (max-width: 768px){

@@ -52,3 +52,53 @@ nav{
         text-align: right;
     }
 }
+
+//手機版選單
+.openMenu{
+    //position: fixed 占滿整個版面 所以可以當成position: absolute
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    //background可以做漸層 background-color不可以做漸層
+    background-color: rgba(#ccc,0.7);
+    z-index: 30;
+    //預設值
+    right: -100%;
+    transition: all 0.5s;
+    .menuData{
+        position: absolute;
+        width: 75%;
+        height: 100%;
+        background-color: #fff;
+        right: 0px;
+        padding: 20px;
+        .close{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            
+
+        }
+        .menuList{
+            margin-top: 20vw;
+            div{
+                margin-bottom: 20px;
+                border-bottom: 1px solid #ccc;
+                text-align: center;
+
+                a{
+                    text-decoration: none;
+                    color: #000;
+                    font-size: 20px;
+                }
+            }
+        }
+        .menuIcon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        
+    }
+}

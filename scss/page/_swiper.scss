@@ -35,7 +35,7 @@
 
 .PStyle{
         font-size: 20px;
-        //引用 對象名稱
+        //@extend引用 .對象名稱;
         @extend .H1Style;
 
 }

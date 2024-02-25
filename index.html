@@ -13,6 +13,41 @@
   </head>
 
   <body>
+    <!-- 選單 -->
+    <!-- 外層 -->
+    <div class="openMenu mb">
+      <!-- 內層 -->
+      <div class="menuData">
+        <!-- close -->
+        <img class="close" src="./img3/close_icon.png" alt="" />
+        <!-- data -->
+        <div class="menuList">
+          <div>
+            <a href="">門市類型</a>
+          </div>
+          <div>
+            <a href="">門市資訊</a>
+          </div>
+          <div>
+            <a href="">其他服務</a>
+          </div>
+        </div>
+        <!-- icon -->
+        <div class="menuIcon">
+          <div>
+            <a href="">
+              <img src="./img3/fb_icon.png" alt="" />
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <img src="./img3/ig_icon.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 導覽列 -->
     <nav>
       <a href="#">
         <img src="./img3/starbucks_icon.png" alt="" />
@@ -34,7 +69,7 @@
       <div>
         <!-- 手機板menu圖案 -->
         <div class="mb menu">
-        <img src="./img3/list_icon.png" alt="">
+          <img id="open" src="./img3/list_icon.png" alt="" />
         </div>
       </div>
     </nav>
@@ -45,65 +80,68 @@
         <!-- 1 -->
         <div class="swiper-slide">
           <!-- pc是桌機版圖片 -->
-            <img  class="pc" src="./img3/banner_1.jpg" alt="">
-            <!-- mb是手機版圖片 -->
-            <img  class="mb" src="./img3/phone_1.jpg" alt="">
+          <img class="pc" src="./img3/banner_1.jpg" alt="" />
+          <!-- mb是手機版圖片 -->
+          <img class="mb" src="./img3/phone_1.jpg" alt="" />
 
-
-            <div class="bannerTitle">
+          <div class="bannerTitle">
             <h1 class="H1Style">最新消息</h1>
-            <hr>
+            <hr />
             <p class="PStyle">文字內容</p>
-            </div>
+          </div>
         </div>
         <!-- 2 -->
         <div class="swiper-slide">
-            <img class="pc" src="./img3/banner_2.jpg" alt="">
-            <!-- mb是手機版圖片 -->
-            <img  class="mb" src="./img3/phone_2.jpg" alt="">
+          <img class="pc" src="./img3/banner_2.jpg" alt="" />
+          <!-- mb是手機版圖片 -->
+          <img class="mb" src="./img3/phone_2.jpg" alt="" />
 
-
-            <div class="bannerTitle">
-              <h1 class="H1Style">最新消息</h1>
-              <hr>
-              <p class="PStyle">文字內容</p>
-              </div>
+          <div class="bannerTitle">
+            <h1 class="H1Style">最新消息</h1>
+            <hr />
+            <p class="PStyle">文字內容</p>
+          </div>
         </div>
         <!-- 3 -->
         <div class="swiper-slide">
-            <img class="pc" src="./img3/banner_3.jpg" alt="">
-            <!-- mb是手機版圖片 -->
-            <img  class="mb" src="./img3/phone_3.jpg" alt="">
+          <img class="pc" src="./img3/banner_3.jpg" alt="" />
+          <!-- mb是手機版圖片 -->
+          <img class="mb" src="./img3/phone_3.jpg" alt="" />
 
-
-            <div class="bannerTitle">
-              <h1 class="H1Style">最新消息</h1>
-              <hr>
-              <p class="PStyle">文字內容</p>
-              </div>
+          <div class="bannerTitle">
+            <h1 class="H1Style">最新消息</h1>
+            <hr />
+            <p class="PStyle">文字內容</p>
+          </div>
         </div>
       </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
 
-
-
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-          pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-      </script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      //open
+      $("#open").click(function () {
+        $('.openMenu').css('right','0%')
+      });
+
+      //close
+      $(".close").click(function () {
+        $('.openMenu').css('right','-100%')
+      });
+    </script>
   </body>
 </html>
