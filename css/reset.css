@@ -86,15 +86,17 @@ nav {
   background-color: rgba(204, 204, 204, 0.7);
   z-index: 30;
   right: -100%;
+  opacity: 0;
   transition: all 0.5s;
 }
 .openMenu .menuData {
   position: absolute;
+  right: -100%;
   width: 75%;
   height: 100%;
   background-color: #fff;
-  right: 0px;
   padding: 20px;
+  transition: all 0.5s;
 }
 .openMenu .menuData .close {
   position: absolute;

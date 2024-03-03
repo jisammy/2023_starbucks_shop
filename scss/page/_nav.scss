@@ -62,16 +62,20 @@ nav{
     //background可以做漸層 background-color不可以做漸層
     background-color: rgba(#ccc,0.7);
     z-index: 30;
-    //預設值
+    // 預設值
     right: -100%;
+    // 第一步:openMenu透明度設成0 背景預設值為(opacity: 0)
+    opacity: 0;
     transition: all 0.5s;
     .menuData{
         position: absolute;
+        // 第二步:menuData退到最右邊 預設值為(right: -100%) 
+        right: -100%;
         width: 75%;
         height: 100%;
         background-color: #fff;
-        right: 0px;
         padding: 20px;
+        transition: all 0.5s;
         .close{
             position: absolute;
             right: 20px;
