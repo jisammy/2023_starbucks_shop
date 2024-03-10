@@ -39,3 +39,18 @@
         @extend .H1Style;
 
 }
+// swiper 是position: relative;
+.arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 30;
+    cursor: pointer;
+}
+
+.left{
+    left: 0;
+}
+
+.right{
+    right: 0;
+}

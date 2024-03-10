@@ -156,4 +156,67 @@ nav {
 
 .PStyle {
   font-size: 20px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 30;
+  cursor: pointer;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.product {
+  padding: 15px 80px;
+}
+.product > div {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-gap: 15px;
+  margin-bottom: 25px;
+}
+.product > div:nth-child(2) {
+  grid-template-areas: "pic text";
+  grid-template-columns: 60% 40%;
+}
+.product > div:nth-child(2) .text {
+  grid-area: text;
+}
+.product > div:nth-child(2) .pic {
+  grid-area: pic;
+}
+.product > div .text .title {
+  font-size: 26px;
+  font-weight: 600;
+}
+.product > div .text hr {
+  margin: 20px 0 15px;
+}
+.product > div .text p {
+  width: 300px;
+  margin-bottom: 20px;
+}
+.product > div .text a {
+  border: 1px solid #15733a;
+  color: #15733a;
+  padding: 5px 50px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.product > div .text a:hover {
+  background-color: #15733a;
+  color: #fff;
+}
+.product > div .pic img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=reset.css.map */

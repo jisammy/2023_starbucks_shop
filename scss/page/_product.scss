@@ -1,0 +1,52 @@
+.product{
+    padding: 15px 80px;
+    > div{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-gap: 15px;
+        margin-bottom: 25px;
+        // 指向
+        &:nth-child(2){
+            grid-template-areas: 'pic text';
+            grid-template-columns: 60% 40%;
+            .text{
+                grid-area: text;
+            }
+            .pic{
+                grid-area: pic;
+            }
+        }
+        .text{
+            .title{
+                font-size: 26px;
+                font-weight: 600;
+            }
+            hr{
+                margin: 20px 0 15px;
+            }
+            p{
+                width: 300px;
+                margin-bottom: 20px;
+            }
+            a{
+                border: 1px solid #15733a;
+                color: #15733a;
+                padding: 5px 50px;
+                text-decoration: none;
+                transition: all 0.5s;
+                &:hover{
+                    background-color: #15733a;
+                    color: #fff;
+                }
+            }
+        }
+        .pic{
+            img{
+                width: 100%;
+                height: 350px;
+                object-fit: cover;
+            }
+            
+        }
+    }
+}

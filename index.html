@@ -115,9 +115,60 @@
           </div>
         </div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <!-- 箭頭 -->
+      <img class="arrow left" src="./img3/left_arrow_icon.png" alt="" />
+      <img class="arrow right" src="./img3/right_arrow_icon.png" alt="" />
+
+      <!-- 數字 -->
       <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- 產品介紹 -->
+    <div class="product">
+      <!-- 產品1 -->
+      <div>
+        <div class="text">
+          <div class="title">可可柚香那堤</div>
+          <hr />
+          <p>
+            醇厚溫潤的摩卡與蜂蜜紅柚的香氣結合，飲品上方再加上帶有焦糖榛果風味的鮮奶油，
+            在品嘗間體會口中風味多層次的變化，餘韻中帶有柚香的清爽與巧克力融合的甘甜，
+            以豐富的迷人滋味共同歡慶五百店的美好記憶。
+          </p>
+          <a href="">MEOR</a>
+        </div>
+        <div class="pic">
+          <img src="./img3/drink_1.jpg" alt="" />
+        </div>
+      </div>
+      <!-- 產品2 -->
+      <div>
+        <div class="text">
+          <div class="title">雲朵冰搖濃縮咖啡</div>
+          <hr />
+          <p>
+            創新的現煮義式飲品!滿足咖啡饕客的咖啡味蕾。綿滑香柔的雲朵(冰奶泡)是由低脂牛奶打製而成，倒入杯中後再添加手工搖製，濃郁香醇的冰搖濃縮咖啡，在冰鎮清爽的滋味中，品嘗兩者交織出的驚喜風味！
+          </p>
+          <a href="">MEOR</a>
+        </div>
+        <div class="pic">
+          <img src="./img3/drink_2.jpg" alt="" />
+        </div>
+      </div>
+      <!-- 產品3 -->
+      <div>
+        <div class="text">
+          <div class="title">濃焦糖那堤</div>
+          <hr />
+          <p>
+            焦糖和那堤咖啡愛好者無法抗拒的奢華享受。由深焦糖醬和蒸煮牛奶以及經典濃縮咖啡的組合，上方再加上鮮奶油與深焦糖醬。
+          </p>
+          <a href="">MEOR</a>
+        </div>
+        <div class="pic">
+          <img src="./img3/drink_3.jpg" alt="" />
+        </div>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -129,33 +180,32 @@
           type: "fraction",
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".right",
+          prevEl: ".left",
         },
       });
       //open
       $("#open").click(function () {
-      // 1.讓背景移動回來(-100% to 0% )
-      // 2.背景透明度Opacity:0 to Option:1
-      // 3.讓白色選單移動回來(-100% to 0% )
-      
-      //1.
-      $('.openMenu').css('right','0%')
-      // 防呆措施pointer-events:動畫執行結束前無法點擊選單按鈕跟叉叉按鈕 
-      $('#open').css('pointer-events','none')
-      $('.close').css('pointer-events','none')
-      //2.
-      setTimeout(function(){
-        $('.openMenu').css('opacity','1')
-      }, 500)
-      //3.
-      setTimeout(function(){
-        $('.menuData').css('right','0%')
-        // 防呆措施pointer-events:動畫執行後開啟點擊選單按鈕跟叉叉按鈕
-        $('#open').css('pointer-events','auto')
-        $('.close').css('pointer-events','auto')
-      }, 1000)
+        // 1.讓背景移動回來(-100% to 0% )
+        // 2.背景透明度Opacity:0 to Option:1
+        // 3.讓白色選單移動回來(-100% to 0% )
 
+        //1.
+        $(".openMenu").css("right", "0%");
+        // 防呆措施pointer-events:動畫執行結束前無法點擊選單按鈕跟叉叉按鈕
+        $("#open").css("pointer-events", "none");
+        $(".close").css("pointer-events", "none");
+        //2.
+        setTimeout(function () {
+          $(".openMenu").css("opacity", "1");
+        }, 500);
+        //3.
+        setTimeout(function () {
+          $(".menuData").css("right", "0%");
+          // 防呆措施pointer-events:動畫執行後開啟點擊選單按鈕跟叉叉按鈕
+          $("#open").css("pointer-events", "auto");
+          $(".close").css("pointer-events", "auto");
+        }, 1000);
       });
 
       //close
@@ -163,16 +213,15 @@
         // $('.openMenu').css('right','-100%')
 
         //1.白色選單往右邊移動(收回)
-        $('.menuData').css('right','-100%')
+        $(".menuData").css("right", "-100%");
         //2.背景透明度改成0
-        setTimeout(function(){
-        $('.openMenu').css('opacity','0')
-        }, 500)
+        setTimeout(function () {
+          $(".openMenu").css("opacity", "0");
+        }, 500);
         //3.背景往右邊移動(收回)
-        setTimeout(function(){
-        $('.openMenu').css('right','-100%')
-        }, 1000)
-
+        setTimeout(function () {
+          $(".openMenu").css("right", "-100%");
+        }, 1000);
       });
     </script>
   </body>
