@@ -1,22 +1,44 @@
 .product{
     padding: 15px 80px;
+    @media screen and (max-width:900px) {
+        padding: 15px 5vw;
+    }
     > div{
         display: grid;
         grid-template-columns: 40% 60%;
         grid-gap: 15px;
         margin-bottom: 25px;
+        @media screen and (max-width:900px) {
+            grid-template-columns: repeat(1, 1fr) !important;
+            grid-template-areas: "pic" "text" !important;
+        }
         // 指向
         &:nth-child(2){
             grid-template-areas: 'pic text';
             grid-template-columns: 60% 40%;
+            @media screen and (max-width:900px) {
+                grid-template-areas: none;
+                
+            }
             .text{
                 grid-area: text;
+                @media screen and (max-width:900px) {
+                    grid-area: auto;
+                }
             }
             .pic{
                 grid-area: pic;
+                @media screen and (max-width:900px) {
+                    grid-area: auto;
+                }
             }
         }
         .text{
+            @media screen and (max-width:900px) {
+                grid-area:text !important; 
+                text-align: center;
+            }
+            
             .title{
                 font-size: 26px;
                 font-weight: 600;
@@ -27,20 +49,17 @@
             p{
                 width: 300px;
                 margin-bottom: 20px;
-            }
-            a{
-                border: 1px solid #15733a;
-                color: #15733a;
-                padding: 5px 50px;
-                text-decoration: none;
-                transition: all 0.5s;
-                &:hover{
-                    background-color: #15733a;
-                    color: #fff;
+                letter-spacing: 1px;
+                @media screen and (max-width:900px) {
+                    width: 100%;;
                 }
             }
+            
         }
         .pic{
+            @media screen and (max-width:900px) {
+                grid-area:pic !important;
+            }
             img{
                 width: 100%;
                 height: 350px;
@@ -50,3 +69,16 @@
         }
     }
 }
+
+.moreHover{
+    border: 1px solid #15733a;
+    color: #15733a;
+    padding: 5px 50px;
+    text-decoration: none;
+    transition: all 0.5s;
+    &:hover{
+        background-color: #15733a;
+        color: #fff;
+    }
+}
+

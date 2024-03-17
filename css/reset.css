@@ -176,21 +176,53 @@ nav {
 .product {
   padding: 15px 80px;
 }
+@media screen and (max-width: 900px) {
+  .product {
+    padding: 15px 5vw;
+  }
+}
 .product > div {
   display: grid;
   grid-template-columns: 40% 60%;
   grid-gap: 15px;
   margin-bottom: 25px;
 }
+@media screen and (max-width: 900px) {
+  .product > div {
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-areas: "pic" "text" !important;
+  }
+}
 .product > div:nth-child(2) {
   grid-template-areas: "pic text";
   grid-template-columns: 60% 40%;
 }
+@media screen and (max-width: 900px) {
+  .product > div:nth-child(2) {
+    grid-template-areas: none;
+  }
+}
 .product > div:nth-child(2) .text {
   grid-area: text;
 }
+@media screen and (max-width: 900px) {
+  .product > div:nth-child(2) .text {
+    grid-area: auto;
+  }
+}
 .product > div:nth-child(2) .pic {
   grid-area: pic;
+}
+@media screen and (max-width: 900px) {
+  .product > div:nth-child(2) .pic {
+    grid-area: auto;
+  }
+}
+@media screen and (max-width: 900px) {
+  .product > div .text {
+    grid-area: text !important;
+    text-align: center;
+  }
 }
 .product > div .text .title {
   font-size: 26px;
@@ -202,21 +234,58 @@ nav {
 .product > div .text p {
   width: 300px;
   margin-bottom: 20px;
+  letter-spacing: 1px;
 }
-.product > div .text a {
-  border: 1px solid #15733a;
-  color: #15733a;
-  padding: 5px 50px;
-  text-decoration: none;
-  transition: all 0.5s;
+@media screen and (max-width: 900px) {
+  .product > div .text p {
+    width: 100%;
+  }
 }
-.product > div .text a:hover {
-  background-color: #15733a;
-  color: #fff;
+@media screen and (max-width: 900px) {
+  .product > div .pic {
+    grid-area: pic !important;
+  }
 }
 .product > div .pic img {
   width: 100%;
   height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.moreHover, .brand a {
+  border: 1px solid #15733a;
+  color: #15733a;
+  padding: 5px 50px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.moreHover:hover, .brand a:hover {
+  background-color: #15733a;
+  color: #fff;
+}
+
+.brand {
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  padding: 15px 65px;
+}
+.brand .brandPic img {
+  width: 100%;
+  height: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
+}
+.brand h3 {
+  padding: 20px 0;
+  font-size: 24px;
+}
+.brand hr, .brand p {
+  margin-bottom: 20px;
+}
+.brand p {
+  letter-spacing: 1px;
 }/*# sourceMappingURL=reset.css.map */
