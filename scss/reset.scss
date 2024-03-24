@@ -28,3 +28,35 @@
 @import "page/_swiper.scss"; // 輪播
 @import "page/_product.scss"; // 產品介紹
 @import "page/_brand.scss"; //品牌介紹
+
+
+footer{
+    background-color: #eee;
+    padding: 100px 0;
+    margin-top: 100px;
+    text-align: center;
+    @media screen and (max-width:900px){
+    padding: 10vw 5vw;
+    margin-top: 10vw;
+        
+    }
+    img{
+        width: 32px;
+        height: 32px;
+    }
+    .contact{
+        margin: 20px 0;
+        color: #15733A;
+    }
+    .copyright{
+        color: #aaa;
+        font-size: 11px;
+    }
+}
+
+.br900{
+    display: none;
+    @media screen and (max-width:900px){
+    display: block;
+    }
+}

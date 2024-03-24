@@ -2,6 +2,8 @@
     padding: 15px 80px;
     @media screen and (max-width:900px) {
         padding: 15px 5vw;
+        //若動畫造成畫面跑版 可加入
+        // overflow: hidden;
     }
     > div{
         display: grid;
@@ -51,7 +53,7 @@
                 margin-bottom: 20px;
                 letter-spacing: 1px;
                 @media screen and (max-width:900px) {
-                    width: 100%;;
+                    width: 100%;
                 }
             }
             
